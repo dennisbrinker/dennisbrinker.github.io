@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest identifier="_6LQKrh6LXW2" version="1.0" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
+      <general>
+        <title>
+          <langstring xml:lang="x-none">Essentials of HUD Program - Navigating EIV</langstring>
+        </title>
+        <description>
+          <langstring xml:lang="x-none">In this class, you’ll learn about the Enterprise Income Verification system (EIV) used for HUD-subsidized properties. The covered topics are pulled from HUD Handbook 4350.3 and include where EIV data originates, how to safely store the reports, and the purpose for each of the 11 reports: when they are run, how long they are kept and in which files. Additional issues include data correction, repayment of assistance and fraud. At the end of the class, you’ll receive a certificate of attendance, including one hour of continuing education.</langstring>
+        </description>
+      </general>
+      <lifecycle>
+        <version>
+          <langstring xml:lang="x-none">1</langstring>
+        </version>
+        <status>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">Final</langstring>
+          </value>
+        </status>
+      </lifecycle>
+      <metametadata>
+        <metadatascheme>ADL SCORM 1.2</metadatascheme>
+      </metametadata>
+      <educational>
+        <typicallearningtime>
+          <datetime>PT0H0M0S</datetime>
+        </typicallearningtime>
+      </educational>
+      <rights>
+        <cost>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">yes</langstring>
+          </value>
+        </cost>
+        <copyrightandotherrestrictions>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">yes</langstring>
+          </value>
+        </copyrightandotherrestrictions>
+      </rights>
+    </lom>
+  </metadata>
+  <organizations default="Essentials_of_HUD_Program_-_Navigating_EIV_ORG">
+    <organization identifier="Essentials_of_HUD_Program_-_Navigating_EIV_ORG">
+      <title>Essentials of HUD Program - Navigating EIV</title>
+      <item identifier="Essentials_of_HUD:_Navigating_EIV,_The_Enterprise_Income_Verification_System__SCO" isvisible="true" identifierref="__6LQKrh6LXW2_RES">
+        <title>Essentials of HUD Program - Navigating EIV</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="__6LQKrh6LXW2_RES" type="webcontent" href="index_lms.html" adlcp:scormtype="sco">
+      <file href="story_content/thumbnail.jpg" />
+      <file href="mobile/5bl8g1MXavt.png" />
+      <file href="mobile/6nERs3tfJ1f.png" />
+      <file href="mobile/6QgvF8GWESO.jpg" />
+      <file href="story_content/6Yv8eNN2OON_44100_56_1.mp3" />
+      <file href="story_content/5n2NZPDJeQN_captions.js" />
+      <file href="mobile/6SnnjkaKA50.png" />
+      <file href="story_content/6fUxzKqgAbZ_44100_56_1.mp3" />
+      <file href="story_content/6A2heOCy3b8_captions.js" />
+      <file href="story_content/6eQQd9PsuZc_44100_56_1.mp3" />
+      <file href="story_content/6JBevR6XtF3_captions.js" />
+      <file href="mobile/6r7YoWqPyxB.png" />
+      <file href="story_content/6q4KyE6lxsi_44100_56_1.mp3" />
+      <file href="story_content/5geHE1CVp1X_captions.js" />
+      <file href="story_content/63sjGErhTeJ_44100_56_1.mp3" />
+      <file href="story_content/6XUfKVvYN0K_captions.js" />
+      <file href="story_content/62bGB8hzwvX_44100_56_1.mp3" />
+      <file href="story_content/6N6mZXNN3K0_captions.js" />
+      <file href="mobile/6CdhuKj7Y5J.png" />
+      <file href="mobile/5vIbwb08X89.png" />
+      <file href="story_content/6cYd4ksFgPY_44100_56_1.mp3" />
+      <file href="story_content/6kfDx3WHj7z_captions.js" />
+      <file href="mobile/6qPj5AC2Xj2_P_189_0_1280_1440.jpg" />
+      <file href="story_content/5wlsAhf3qJX_44100_56_1.mp3" />
+      <file href="story_content/6NrC0SEuW5f_captions.js" />
+      <file href="story_content/6ZGZP8IdDvN_44100_56_1.mp3" />
+      <file href="story_content/6iKt7YYqfr4_captions.js" />
+      <file href="mobile/64ePf2OABr2_P_330_738_1034_1309.jpg" />
+      <file href="mobile/5Xqcd7o9qVg.png" />
+      <file href="story_content/6fOE4P4vuy9_44100_56_1.mp3" />
+      <file href="story_content/67PBb6bzLPu_captions.js" />
+      <file href="mobile/5c7tp7XTjJ3_P_32_22_1439_2030.png" />
+      <file href="story_content/zoomIcon.png" />
+      <file href="story_content/6hQZJAYsuWO_44100_56_1.mp3" />
+      <file href="story_content/5h0R6slPcv4_captions.js" />
+      <file href="mobile/6acF73431Su_P_462_0_1120_1260.jpg" />
+      <file href="story_content/6EWC7t24ita_44100_56_1.mp3" />
+      <file href="story_content/60Ajd3fl6DC_captions.js" />
+      <file href="mobile/690EIpX5QcX_P_674_657_1098_701.jpg" />
+      <file href="mobile/6YW0rx3gPUL_P_0_79_2048_1285.jpg" />
+      <file href="story_content/68iN7E7AWZ6_44100_56_1.mp3" />
+      <file href="story_content/5ypTN2mPwkl_captions.js" />
+      <file href="mobile/6etZfgZ8vo8_P_263_1_1103_1364.jpg" />
+      <file href="story_content/6Z4b1LTALaN_44100_56_1.mp3" />
+      <file href="story_content/6RVPjzO5ELX_captions.js" />
+      <file href="story_content/6oxUsR9TH2e_44100_56_0.mp3" />
+      <file href="story_content/5bWRMehpatU_44100_56_1.mp3" />
+      <file href="mobile/6DaZz4us4no_P_248_-61_1112_2048.jpg" />
+      <file href="story_content/5YvdmNODQ3v_44100_56_1.mp3" />
+      <file href="story_content/6VLZwLcYiON_captions.js" />
+      <file href="mobile/5p4yvV5oevQ_P_952_1_1092_1364.jpg" />
+      <file href="story_content/5fQooz74Thk_44100_56_1.mp3" />
+      <file href="story_content/6JA9HdTpDxK_captions.js" />
+      <file href="mobile/5d6SQYavtBm.jpg" />
+      <file href="mobile/5Z3AUsVRqVm.png" />
+      <file href="mobile/5qvvbBprkRm_P_127_0_1293_1364.jpg" />
+      <file href="story_content/5mEdd75E5sj_44100_56_1.mp3" />
+      <file href="story_content/62ykU6ccfOy_captions.js" />
+      <file href="meta.xml" />
+      <file href="mobile/6Vuf0Tkh6lk.png" />
+      <file href="story_content/6g2cFm5rsX2.png" />
+      <file href="story_content/6j0cDg17jnO.png" />
+      <file href="story_content/6EAGho8xbzd.png" />
+      <file href="story_content/6h1YQWf69i1.png" />
+      <file href="story_content/5riRUVGQeAo.png" />
+      <file href="story_content/6fqiE2FcpRN.png" />
+      <file href="story_content/6Bl4VtypZ0s.png" />
+      <file href="story_content/triggers.js" />
+      <file href="story_content/user.js" />
+      <file href="story_content/external_files/EIV Class Manual_09072022.pdf" />
+      <file href="story_content/external_files/EIV 4350.3 Chapter 9.pdf" />
+      <file href="story_content/external_files/HUD 9887.pdf" />
+      <file href="story_content/external_files/EIV Tenant Consent Exhibit 9-4.pdf" />
+      <file href="story_content/external_files/HUD 4350.3 Exhibit 5-1.pdf" />
+      <file href="story_content/external_files/EIV System-Notice H 2013-06 .pdf" />
+      <file href="mobile/Shape5yALZ0Rn7td.png" />
+      <file href="mobile/Shape6YMtwBYbrG1.png" />
+      <file href="mobile/Shape6R2dbDhK7wI.png" />
+      <file href="mobile/Shape6WGrM3qNLkG.png" />
+      <file href="mobile/Shape6psmuyNpV2Z.png" />
+      <file href="mobile/Shape6qBXBBdIyIf.png" />
+      <file href="mobile/Shape6qCooVrPBTj.png" />
+      <file href="mobile/Shape5vOhKsoQWFb.png" />
+      <file href="mobile/Shape6rCwvOUKo6U.png" />
+      <file href="mobile/txt__default_5kcF9gdgYF9.png" />
+      <file href="mobile/txt__default_6HjrFHLyGAp.png" />
+      <file href="mobile/txt__default_5Z0La9qDTMO.png" />
+      <file href="mobile/txt__default_6PdkfgGGcIe.png" />
+      <file href="mobile/txt__default_6ownRaD0JBN.png" />
+      <file href="mobile/txt__default_62nr4QB9PRX.png" />
+      <file href="mobile/txt__default_6pDBHqjwrf3.png" />
+      <file href="mobile/txt__default_5i7ZHD3TB7G.png" />
+      <file href="mobile/txt__default_6QzzAh12jsW.png" />
+      <file href="mobile/txt__default_5xbP3FrXrsS.png" />
+      <file href="mobile/txt__default_5mW314Xdzqc.png" />
+      <file href="mobile/txt__default_5uRP9xHKlPS.png" />
+      <file href="html5/data/css/output.min.css" />
+      <file href="html5/data/js/5dMK59TxkUG.js" />
+      <file href="html5/data/js/5dR9jCpjfRF.js" />
+      <file href="html5/data/js/5jCNlCvAJeM.js" />
+      <file href="html5/data/js/5kav3rAYhLw.js" />
+      <file href="html5/data/js/5mfcoxcudrt.js" />
+      <file href="html5/data/js/5mt3YsSt8rn.js" />
+      <file href="html5/data/js/5sbXDPg0Mu5.js" />
+      <file href="html5/data/js/5tb11Y50W1k.js" />
+      <file href="html5/data/js/5XzZXSCKyL1.js" />
+      <file href="html5/data/js/63tzPH48J32.js" />
+      <file href="html5/data/js/64Bz4ueUBo8.js" />
+      <file href="html5/data/js/64Q2paHZyDd.js" />
+      <file href="html5/data/js/660eutH5l3q.js" />
+      <file href="html5/data/js/6cnySaV1BFm.js" />
+      <file href="html5/data/js/6Fc4YxLaEXu.js" />
+      <file href="html5/data/js/6FGOrMAfQfm.js" />
+      <file href="html5/data/js/6GA1WvPwbzE.js" />
+      <file href="html5/data/js/6mqnM7x9cyo.js" />
+      <file href="html5/data/js/6Nnx9du5YFO.js" />
+      <file href="html5/data/js/6O62Y9dq1sN.js" />
+      <file href="html5/data/js/6pmVyMdrltD.js" />
+      <file href="html5/data/js/6XcG14OtCUN.js" />
+      <file href="html5/data/js/data.js" />
+      <file href="html5/data/js/frame.js" />
+      <file href="html5/data/js/paths.js" />
+      <file href="html5/lib/scripts/bootstrapper.min.js" />
+      <file href="html5/lib/scripts/frame.desktop.min.js" />
+      <file href="html5/lib/scripts/frame.mobile.min.js" />
+      <file href="html5/lib/scripts/slides.min.js" />
+      <file href="html5/lib/stylesheets/desktop.min.css" />
+      <file href="html5/lib/stylesheets/mobile.min.css" />
+      <file href="html5/lib/stylesheets/mobile-fonts/open-sans-bold.woff" />
+      <file href="html5/lib/stylesheets/mobile-fonts/open-sans-light.woff" />
+      <file href="html5/lib/stylesheets/mobile-fonts/open-sans-regular.woff" />
+      <file href="analytics-frame.html" />
+      <file href="story.html" />
+      <file href="index_lms.html" />
+      <file href="lms/AICCComm.html" />
+      <file href="lms/blank.html" />
+      <file href="lms/browsersniff.js" />
+      <file href="lms/goodbye.html" />
+      <file href="lms/scormdriver.js" />
+    </resource>
+  </resources>
+</manifest>

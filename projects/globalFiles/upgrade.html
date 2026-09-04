@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Unsupported Browser</title>
+
+    <style>
+        * {margin: 0px; padding: 0px;}
+        body {font-family: Arial, Geneva, Sans-Serif;}
+        #main_container {
+            background: radial-gradient(ellipse at 50% 43%, rgb(23,98,157)20%, rgb(8,54,103)60%, rgb(2,18,53) 90%); width: 100vw; height: 100vh; position: fixed; z-index: 600; display: flex; justify-content: center; align-items: center; text-align: center;
+        }
+        p#message {font-size: 1.6em; color: #fff; padding: 0 40px 40px 40px; max-width: 1200px;}
+        table {margin: 0 auto;}
+        table p {font-size: 1.1em; color: #fff;}
+        td {padding: 5px 15px;}
+    </style>
+
+</head>
+
+<body>
+
+    <div id="main_container">
+        <div>
+            <p id="message"></p>
+            <table>
+                <tr>
+                    <td><img alt="" width="110" height="106" src="images/browsers/edge.png"></td>
+                    <td><img alt="" width="110" height="106" src="images/browsers/firefox.png"></td>
+                    <td><img alt="" width="110" height="106" src="images/browsers/chrome.png"></td>
+                    <td><img alt="" width="110" height="106" src="images/browsers/safari.png"></td>
+                </tr>
+                <tr>
+                    <td><p>Edge</p></td>
+                    <td><p>Firefox</p></td>
+                    <td><p>Chrome</p></td>
+                    <td><p>Safari</p></td>
+                </tr>
+            </table>
+        </div>        
+    </div>
+    
+
+    <script>
+        
+        var navLang = navigator.language; 
+        
+        function setMessage() {        
+            navLang = navLang.toLowerCase();
+            var langCode = navLang.substring(0, 2);
+            var countryCode = navLang.substring(3, 5);        
+            var cultureCode;
+
+            //console.log(navLang, langCode, countryCode);
+
+            switch(langCode) {
+                case "ar":
+                    cultureCode = "ar-SA";
+                    var messageEl = document.getElementById("message");
+                    messageEl.style.direction = "rtl";
+                    break;
+                case "cs":
+                    cultureCode = "cs-CZ"
+                    break;
+                case "de":
+                    cultureCode = "de-DE"
+                    break;
+                case "el":
+                    cultureCode = "el-GR"
+                    break;
+                case "en":
+                    cultureCode = "en-US"
+                    break;
+                case "es":
+                    if (countryCode == "es") {
+                        cultureCode = "es-ES";
+                    } else if (countryCode == "mx") {
+                        cultureCode = "es-MX";
+                    } else {
+                        cultureCode = "es-ES";
+                    }
+                    break;
+                case "fr":
+                    cultureCode = "fr-FR"
+                    break;
+                case "hu":
+                    cultureCode = "hu-HU"
+                    break;
+                case "id":
+                    cultureCode = "id-ID"
+                    break;
+                case "it":
+                    cultureCode = "it-IT"
+                    break;
+                case "ja":
+                    cultureCode = "ja-JP"
+                    break;
+                case "ko":
+                    cultureCode = "ko-KR"
+                    break;
+                case "nl":
+                    cultureCode = "nl-NL"
+                    break;
+                case "pl":
+                    cultureCode = "pl-PL"
+                    break;
+                case "pt":
+                    cultureCode = "pt-BR"
+                    break;
+                case "ro":
+                    cultureCode = "ro-RO"
+                    break;
+                case "ru":
+                    cultureCode = "ru-RU"
+                    break;
+                case "th":
+                    cultureCode = "th-TH"
+                    break;
+                case "tr":
+                    cultureCode = "tr-TR"
+                    break;
+                case "uk":
+                    cultureCode = "uk-UA"
+                    break;
+                case "vi":
+                    cultureCode = "vi-VN"
+                    break;
+                case "zh":
+                    if (countryCode == "ch") {
+                        cultureCode = "zh-CHS";
+                    } else if (countryCode == "tw") {
+                        cultureCode = "zh-TW";
+                    } else {
+                        cultureCode = "zh-CHS";
+                    }
+                    break;
+
+                default:
+                    cultureCode = "en-US"                
+            }
+
+            var text = {
+                "pt-BR": "O navegador que você está usando não é suportado. Use um navegador recomendado:",
+                "es-MX": "El navegador que estás utilizando no se admite. Utiliza uno de los navegadores recomendados:",
+                "tr-TR": "Kullandığınız tarayıcı desteklenmiyor. Lütfen önerilen bir tarayıcı kullanın:",
+                "ru-RU": "Ваш браузер не поддерживается. Используйте рекомендуемый браузер:",
+                "ro-RO": "Browserul pe care îl utilizezi nu este acceptat. Folosește un browser recomandat:",
+                "pl-PL": "Używana przeglądarka nie jest obsługiwana. Użyj jednej z zalecanych przeglądarek:",
+                "nl-NL": "De browser die je gebruikt wordt niet ondersteund. Gebruik een aanbevolen browser:",
+                "it-IT": "Il browser che stai utilizzando non è supportato. Utilizzare un browser consigliato:",
+                "hu-HU": "Az Ön által használt böngésző nem támogatott. Kérjük, az ajánlott böngészők valamelyikét használja:",
+                "fr-FR": "Le navigateur que vous utilisez n'est pas pris en charge. Veuillez utiliser un navigateur recommandé :",
+                "es-ES": "El navegador que utilizas no es compatible. Usa uno de los navegadores recomendados:",
+                "el-GR": "Το πρόγραμμα περιήγησης που χρησιμοποιείτε δεν υποστηρίζεται. Χρησιμοποιήστε ένα από τα προτεινόμενα προγράμματα περιήγησης:",
+                "de-DE": "Der Browser, den Sie verwenden, wird nicht unterstützt. Bitte verwenden Sie einen empfohlenen Browser:",
+                "cs-CZ": "Prohlížeč, který používáte, není podporován. Použijte doporučený prohlížeč:",
+                "ar-SA": "إن المستعرض الذي تستخدمه غير مدعوم. يرجى استخدام مستعرض نوصي به:",
+                "zh-TW": "您使用的瀏覽器不受支援。請使用建議的瀏覽器：",
+                "zh-CHS": "不支持您使用的浏览器。请使用我们推荐的浏览器：",
+                "vi-VN": "Trình duyệt bạn đang sử dụng không được hỗ trợ. Vui lòng sử dụng trình duyệt được đề xuất sau:",
+                "th-TH": "เบราว์เซอร์ที่คุณใช้ไม่รองรับ กรุณาใช้เบราว์เซอร์ที่แนะนำ:",
+                "ko-KR": "사용 중인 브라우저는 지원되지 않습니다. 다음 권장 브라우저를 사용하십시오.",
+                "ja-JP": "お使いのブラウザーはサポートされていません。以下の推奨ブラウザーを使用してください。",
+                "id-ID": "Browser yang Anda gunakan tidak mendukung. Gunakan browser yang direkomendasikan:",
+                "en-US": "The browser you are using is not supported. Please use a recommended browser:",
+                "uk-UA": "Браузер, який ви використовуєте, не підтримується. Скористайтеся рекомендованим браузером:"
+            };
+            
+
+            // put translated message into html
+            var textEl = document.getElementById("message");
+            textEl.textContent = text[cultureCode]
+        }
+        
+        setMessage();
+
+    </script>
+
+
+</body>
+</html>

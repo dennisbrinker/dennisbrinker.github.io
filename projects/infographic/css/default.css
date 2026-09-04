@@ -1,0 +1,111 @@
+/* ----------------------------------
+        MARK: LEGAL SECTION
+---------------------------------- */
+#legal_wrapper {
+    width: 100%;
+    background: #fff;
+    border-top-width: 0.8em;
+    border-top-style: solid;
+    border-top-color: #004892;
+    word-break: break-word;
+}
+
+#legal_wrapper p, #legal_wrapper li {
+    --max-font-size: 13;
+    --min-font-size: 12;
+    line-height: 150%;
+    color: #939393;
+}
+
+#legal_wrapper p:first-of-type {margin-top: 0;}
+#legal_wrapper p:last-of-type {margin-bottom: 0;}
+#legal_wrapper ul ul, #legal_wrapper ul ol, #legal_wrapper ol ul, #legal_wrapper ol ol {margin-block: 0;}
+
+#legal_wrapper p, #legal_wrapper ul, #legal_wrapper ol {margin-block: 0.77em;}
+
+#legal_wrapper.dark_mode {
+    background: #000;
+    border-top-color: #2EC5F4;
+}
+
+
+/* ----------------------------------
+        MARK: NAV BUTTON
+---------------------------------- */
+#nav_wrapper {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 80;
+    display: block;
+}
+
+#nav_icon_wrapper {
+    cursor: pointer;
+    width: 2.8125em;
+    height: 2.8125em;
+    position: relative;
+    border: solid 0.125em #ffffff;
+    background-color: #000000;
+    box-sizing: border-box;
+    transition: 0.15s background;
+}
+
+#nav_icon_wrapper svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#nav_icon_wrapper:hover {
+    background-color: #474747;
+}
+
+
+/* ----------------------------------
+        MARK: PRELOADER
+---------------------------------- */
+#preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#preloader_wrapper {
+    width: 85%;
+    max-width: 550px;
+    text-align: center;
+}
+
+#loading_bar_full_wrapper {
+    margin: 0 auto;
+    opacity: 0;
+}
+#loading_bar_full_bar {
+    height: 2px;
+    background: #357FB7;
+    width: 100%;
+}
+#loading_bar_full_inner {
+    width: 0px;
+    height: 8px;
+    background: #00ACEE;
+	position: relative;
+    top: -3px;
+    margin: 0 auto;
+}
+
+#loading_bar_full-progress {
+    text-align:center;
+    margin-top: 30px;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+
+@media only screen and (min-width: 1921px) {
+
+	#loading_bar_full-progress.p20 {font-size:1.7em;}
+	
+}

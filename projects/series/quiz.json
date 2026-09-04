@@ -1,0 +1,211 @@
+{
+  "Slug": "3-WR01-OverviewWorkingRemotely",
+  "PassingPercentage": 80,
+  "QuestionDisplayLimit": 5,
+  "Randomized": true,
+  "QuestionPool": {
+    "Questions": {
+      "Items": [
+        {
+          "Uid": "Question_1",
+          "QuestionTypeSlug": "SingleSelection",
+          "LocaleText": {
+            "Text": "Which of the following was not listed as one of the most meaningful actions organizations had taken to support remote work during the COVID-19 crisis?"
+          },
+          "Answers": {
+            "Items": [
+              {
+                "LocaleText": {
+                  "Text": "Pet counseling services"
+                },
+                "IsCorrectAnswer": true,
+                "QuestionUid": "Question_1",
+                "Uid": "Question_1_1"
+              },
+              {
+                "LocaleText": {
+                  "Text": "Providing technology for remote work"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_1",
+                "Uid": "Question_1_2"
+              },
+              {
+                "LocaleText": {
+                  "Text": "Promoting work-life balance"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_1",
+                "Uid": "Question_1_3"
+              },
+              {
+                "LocaleText": {
+                  "Text": "Communicating frequently and well"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_1",
+                "Uid": "Question_1_4"
+              }
+            ]
+          }
+        },
+        {
+          "Uid": "Question_2",
+          "QuestionTypeSlug": "SingleSelection",
+          "LocaleText": {
+            "Text": "Participating in virtual events and being active in online meetings are examples of what desirable trait?"
+          },
+          "Answers": {
+            "Items": [
+              {
+                "LocaleText": {
+                  "Text": "Engagement"
+                },
+                "IsCorrectAnswer": true,
+                "QuestionUid": "Question_2",
+                "Uid": "Question_2_1"
+              },
+              {
+                "LocaleText": {
+                  "Text": "Over-expression"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_2",
+                "Uid": "Question_2_2"
+              },
+              {
+                "LocaleText": {
+                  "Text": "Self-aggrandizement"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_2",
+                "Uid": "Question_2_3"
+              },
+              {
+                "LocaleText": {
+                  "Text": "Submissiveness"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_2",
+                "Uid": "Question_2_4"
+              }
+            ]
+          }
+        },
+        {
+          "Uid": "Question_3",
+          "QuestionTypeSlug": "SingleSelection",
+          "LocaleText": {
+            "Text": "True or False: It’s more difficult to showcase work achievements while working remotely."
+          },
+          "Answers": {
+            "Items": [
+              {
+                "LocaleText": {
+                  "Text": "True"
+                },
+                "IsCorrectAnswer": true,
+                "QuestionUid": "Question_3",
+                "Uid": "Question_3_1"
+              },
+              {
+                "LocaleText": {
+                  "Text": "False"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_3",
+                "Uid": "Question_3_2"
+              }
+            ]
+          }
+        },
+        {
+          "Uid": "Question_4",
+          "QuestionTypeSlug": "SingleSelection",
+          "LocaleText": {
+            "Text": "Which of these statements are true concerning home cybersecurity?"
+          },
+          "Answers": {
+            "Items": [
+              {
+                "LocaleText": {
+                  "Text": "All of these answers"
+                },
+                "IsCorrectAnswer": true,
+                "QuestionUid": "Question_4",
+                "Uid": "Question_4_1"
+              },
+              {
+                "LocaleText": {
+                  "Text": "You should make all your passwords strong and secure"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_4",
+                "Uid": "Question_4_2"
+              },
+              {
+                "LocaleText": {
+                  "Text": "You should be wary of email scams"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_4",
+                "Uid": "Question_4_3"
+              },
+              {
+                "LocaleText": {
+                  "Text": "You should invest in a sliding webcam cover"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_4",
+                "Uid": "Question_4_4"
+              }
+            ]
+          }
+        },
+        {
+          "Uid": "Question_5",
+          "QuestionTypeSlug": "SingleSelection",
+          "LocaleText": {
+            "Text": "Which of these is an advantage of working remotely for employers?"
+          },
+          "Answers": {
+            "Items": [
+              {
+                "LocaleText": {
+                  "Text": "Turnover decreases"
+                },
+                "IsCorrectAnswer": true,
+                "QuestionUid": "Question_5",
+                "Uid": "Question_5_1"
+              },
+              {
+                "LocaleText": {
+                  "Text": "Hiring pools shrink"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_5",
+                "Uid": "Question_5_2"
+              },
+              {
+                "LocaleText": {
+                  "Text": "Overhead increases"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_5",
+                "Uid": "Question_5_3"
+              },
+              {
+                "LocaleText": {
+                  "Text": "The quality of the company kickball team improves"
+                },
+                "IsCorrectAnswer": false,
+                "QuestionUid": "Question_5",
+                "Uid": "Question_5_4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

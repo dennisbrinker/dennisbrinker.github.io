@@ -1,0 +1,61 @@
+Release Notes / IntelOne Display TH
+2022-09-12
+
+
+Family name
+	IntelOne Display TH
+
+Version
+	2.000
+
+Version history
+	v1.0 	2021-03-10
+			Initial release
+	v2.0 	2022-09-12
+			Recalculated vertical metrics; minor fixes to outlines and OpenType features
+
+
+Supported scripts
+	Thai (with localized options for Malay and Pali/Sanskrit)
+	Latin (minimal complement)
+
+Number of glyphs 
+	387
+
+Weights/Styles
+	Light
+	Regular
+	Medium
+	Bold
+
+Usage
+	Display 
+	Use at 14 pt and up in print, 24 px and up on screen
+
+File formats
+	OTF 	(Desktop)
+	TTF 	(Desktop/App)
+	WOFF 	(Web)
+	WOFF2 	(Web)
+
+Hinting
+	Automatically hinted to improve screen rendering
+
+Embedding settings
+	No embedding restrictions
+
+Available OpenType features 
+	ss01	Localized Forms (Malay)
+	ss02 	Localized Forms (Pali & Sanskrit)
+	ss11 	Raised Colon (Figures Only)
+	ss12 	Raised Colon (Global)
+	salt 	Stylistic Alternates
+	locl 	Localizations (Malay, Pali/Sanskrit)
+	liga	Automatic Ligatures
+	rlig 	Required Ligatures (Thai)
+	sups	Superscript
+	ccmp	Glyph Composition/Decomposition Rules
+	kern	Kerning
+	mark	Mark Positioning
+	mkmk 	Mark-to-Mark Positioning 
+

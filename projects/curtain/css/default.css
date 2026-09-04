@@ -1,0 +1,119 @@
+/* ----------------------------------
+        MARK: LEGAL PANEL
+---------------------------------- */
+#panel_legal {
+    background: #fff;
+    border-top: 0.8em solid #004892;
+}
+
+#legal_wrapper_full {width: 100%;}
+
+#legal_wrapper_full p, #legal_wrapper_full li {
+    --max-font-size: 13;
+    --min-font-size: 13;
+    margin-block: 0.5em;
+    color: #939393;
+    font-weight: normal;
+}
+
+#legal_wrapper_full ul {
+    margin-block: .5em;
+    margin-left: .25em;
+    padding-left: 1em; 
+}
+
+#panel_legal.dark_mode {
+    background: #000;
+    border-top: 0.8em solid #2EC5F4;
+}
+
+
+/* ----------------------------------
+        MARK: NAV BUTTON
+---------------------------------- */
+#nav_wrapper {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 80;
+    display: block;
+}
+
+/* Note: em sizes for nav icon are different than other templates b/c body font size is 20px, not 16. */
+#nav_icon_wrapper {
+    cursor: pointer;
+    width: 2.8125em;
+    height: 2.8125em;
+    position: relative;
+    border: solid 0.125em #ffffff;
+    background-color: #000000;
+    box-sizing: border-box;
+    transition: 0.15s background;
+}
+
+#nav_icon_wrapper svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#nav_icon_wrapper:hover {
+    background-color: #474747;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #nav_icon_wrapper {
+        width: 2.6em;
+        height: 2.6em;
+    }
+}
+
+
+/* ----------------------------------
+        MARK: PRELOADER
+---------------------------------- */
+#preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#preloader_wrapper {
+    width: 85%;
+    max-width: 550px;
+    text-align: center;
+}
+
+#loading_bar_full_wrapper {
+    margin: 0 auto;
+    opacity: 0;
+}
+#loading_bar_full_bar {
+    height: 2px;
+    background: #357FB7;
+    width: 100%;
+}
+#loading_bar_full_inner {
+    width: 0px;
+    height: 8px;
+    background: #00ACEE;
+	position: relative;
+    top: -3px;
+    margin: 0 auto;
+}
+
+#loading_bar_full-progress {
+    text-align:center;
+    margin-top: 30px;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+
+@media only screen and (min-width: 1921px) {
+
+	#loading_bar_full-progress.p20 {font-size:1.7em;}
+	
+}

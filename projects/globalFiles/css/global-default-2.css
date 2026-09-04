@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+/* Used for 2025-02 IREP courses and newer */
+
+/* MISC STYLES USED FOR ALL COURSES  --------------------------------------------------------------------------- */
+.loading_no_scrolling {overflow-y: hidden !important;}
+
+#course_wrapper_2 {
+    overflow-y:auto;
+    overflow-x:hidden;
+    -webkit-overflow-scrolling: touch;
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+}
+
+/* Keeps Korean symbols/words together */
+html:lang(ko-kr) {
+    word-break: keep-all;
+}
+
+/* Japanese & Chinese text should never be italicized */
+html:lang(ja-jp) :where(.itl, i, p, li, h1, h2, h3, h4, h5, h6, span), html:lang(zh-CHS) :where(.itl, i, p, li, h1, h2, h3, h4, h5, h6, span), html:lang(zh-TW) :where(.itl, i, p, li, h1, h2, h3, h4, h5, h6, span) {
+    font-style: normal !important;
+}
+
+/* https://developer.chrome.com/blog/css-text-wrap-pretty */
+body {
+	text-wrap: pretty;
+}
+
+.text_wrap_normal, .text_wrap_normal * {
+	text-wrap: wrap;
+}
+
+/* Used to override styling in the module.css file:
+	- needed due to a Chrome/Edge update
+	- module.css styling was only used to remove the overscroll behavior on iOS devices
+ */
+html, body, #main_wrapper, .page, [data-overlayscrollbars-viewport] {
+	overscroll-behavior: auto!important;
+}
+
+
+/* FONTS/TEXT SIZES AND STYLES USED IN ALL COURSES --------------------------------------------------------------------------- */
+
+sup {
+    font-size: 65%;
+    vertical-align: baseline;
+    position: relative;
+    top: -0.45em;
+	line-height: normal;
+	white-space: nowrap;
+}
+
+/*INTEL CLEAR*/
+
+/* normal */
+@font-face {
+	font-family: 'IntelClear';
+	src: url('fonts/Intel_Clear/Latn/IntelClear_WLat_Rg.woff') format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* bold */
+@font-face {
+	font-family: 'IntelClear';
+	src: url('fonts/Intel_Clear/Latn/IntelClear_WLat_Bd.woff') format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* italic */
+@font-face {
+	font-family: 'IntelClear';
+	src: url('fonts/Intel_Clear/Latn/IntelClear_WLat_It.woff') format("woff");
+	font-weight: normal;
+	font-style: italic;
+}
+
+/* bold italic */
+@font-face {
+	font-family: 'IntelClear';
+	src: url('fonts/Intel_Clear/Latn/IntelClear_WLat_BdIt.woff') format("woff");
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* lighter */
+@font-face {
+	font-family: 'IntelClear';
+	src: url('fonts/Intel_Clear/Latn/IntelClear_WLat_Lt.woff') format("woff");
+	font-weight: 200;
+	font-style: normal;
+}
+
+/* lighter italic */
+@font-face {
+	font-family: 'IntelClear';
+	src: url('fonts/Intel_Clear/Latn/IntelClear_WLat_LtIt.woff') format("woff");
+	font-weight: 200;
+	font-style: italic;
+}
+
+.intelClear {
+	font-family: IntelClear, Arial, sans-serif;
+}
+
+body {	font-family: IntelClear, Arial, sans-serif; }
+
+
+.bold {font-weight: bold;}
+.medium {font-weight: 500;} /* Only affects Intel One */
+.itl {	font-style: italic;}
+.lte { font-weight: lighter; }
+
+.notIntelOne .medium {font-weight: bold;}
+
+/* New font size system that uses variables to control min & max */
+h1, h2, h3, h4, h5, h6, p, li, span, p b {
+    /* Defaults */
+	--max-font-size: 16;
+    --min-font-size: calc(var(--max-font-size) * 0.8);
+    --max-screen-width: 1400;
+    --min-screen-width: 450;
+    /* Formulas */
+    --font-size-calc: calc((var(--min-font-size) * 1px) + (var(--max-font-size) - var(--min-font-size)) * ((100vw - (var(--min-screen-width) * 1px)) / (var(--max-screen-width) - var(--min-screen-width))));
+    --clamp-max: calc(var(--max-font-size) * 1px);
+    --clamp-min: calc(var(--min-font-size) * 1px);
+    font-size: clamp(var(--clamp-min), var(--font-size-calc), var(--clamp-max));
+}
+
+/* Different defaults since span and b tags are always nested in other tags. */
+span, p b {
+	--max-font-size: inherit;
+    --min-font-size: inherit;
+}
+
+.p05 { --max-font-size: 5; }
+.p06 { --max-font-size: 6; }
+.p07 { --max-font-size: 7; }
+.p08 { --max-font-size: 8; }
+.p09 { --max-font-size: 9; }
+.p10 { --max-font-size: 10; }
+.p11 { --max-font-size: 11; }
+.p12 { --max-font-size: 12; }
+.p13 { --max-font-size: 13; }
+.p14 { --max-font-size: 14; }
+.p15 { --max-font-size: 15; }
+.p16 { --max-font-size: 16; }
+.p17 { --max-font-size: 17; }
+.p18 { --max-font-size: 18; }
+.p19 { --max-font-size: 19; }
+.p20 { --max-font-size: 20; }
+.p21 { --max-font-size: 21; }
+.p22 { --max-font-size: 22; }
+.p23 { --max-font-size: 23; }
+.p24 { --max-font-size: 24; }
+.p25 { --max-font-size: 25; }
+.p26 { --max-font-size: 26; }
+.p27 { --max-font-size: 27; }
+.p28 { --max-font-size: 28; }
+.p29 { --max-font-size: 29; }
+.p30 { --max-font-size: 30; }
+.p31 { --max-font-size: 31; }
+.p32 { --max-font-size: 32; }
+.p33 { --max-font-size: 33; }
+.p34 { --max-font-size: 34; }
+.p35 { --max-font-size: 35; }
+.p36 { --max-font-size: 36; }
+.p37 { --max-font-size: 37; }
+.p38 { --max-font-size: 38; }
+.p39 { --max-font-size: 39; }
+.p40 { --max-font-size: 40; }
+.p41 { --max-font-size: 41; }
+.p42 { --max-font-size: 42; }
+.p43 { --max-font-size: 43; }
+.p44 { --max-font-size: 44; }
+.p45 { --max-font-size: 45; }
+.p46 { --max-font-size: 46; }
+.p47 { --max-font-size: 47; }
+.p48 { --max-font-size: 48; }
+.p49 { --max-font-size: 49; }
+.p50 { --max-font-size: 50; }
+.p51 { --max-font-size: 51; }
+.p52 { --max-font-size: 52; }
+.p53 { --max-font-size: 53; }
+.p54 { --max-font-size: 54; }
+.p55 { --max-font-size: 55; }
+.p56 { --max-font-size: 56; }
+.p57 { --max-font-size: 57; }
+.p58 { --max-font-size: 58; }
+.p59 { --max-font-size: 59; }
+.p60 { --max-font-size: 60; }
+.p61 { --max-font-size: 61; }
+.p62 { --max-font-size: 62; }
+.p63 { --max-font-size: 63; }
+.p64 { --max-font-size: 64; }
+.p65 { --max-font-size: 65; }
+.p66 { --max-font-size: 66; }
+.p67 { --max-font-size: 67; }
+.p68 { --max-font-size: 68; }
+.p69 { --max-font-size: 69; }
+.p70 { --max-font-size: 70; }
+.p71 { --max-font-size: 71; }
+.p72 { --max-font-size: 72; }
+.p73 { --max-font-size: 73; }
+.p74 { --max-font-size: 74; }
+.p75 { --max-font-size: 75; }
+.p76 { --max-font-size: 76; }
+.p77 { --max-font-size: 77; }
+.p78 { --max-font-size: 78; }
+.p79 { --max-font-size: 79; }
+.p80 { --max-font-size: 80; }
+.p81 { --max-font-size: 81; }
+.p82 { --max-font-size: 82; }
+.p83 { --max-font-size: 83; }
+.p84 { --max-font-size: 84; }
+.p85 { --max-font-size: 85; }
+.p86 { --max-font-size: 86; }
+.p87 { --max-font-size: 87; }
+.p88 { --max-font-size: 88; }
+.p89 { --max-font-size: 89; }
+.p90 { --max-font-size: 90; }
+.p91 { --max-font-size: 91; }
+.p92 { --max-font-size: 92; }
+.p93 { --max-font-size: 93; }
+.p94 { --max-font-size: 94; }
+.p95 { --max-font-size: 95; }
+.p96 { --max-font-size: 96; }
+.p97 { --max-font-size: 97; }
+.p98 { --max-font-size: 98; }
+.p99 { --max-font-size: 99; }
+.p100 { --max-font-size: 100; }
+.p101 { --max-font-size: 101; }
+.p102 { --max-font-size: 102; }
+.p103 { --max-font-size: 103; }
+.p104 { --max-font-size: 104; }
+.p105 { --max-font-size: 105; }
+.p106 { --max-font-size: 106; }
+.p107 { --max-font-size: 107; }
+.p108 { --max-font-size: 108; }
+.p109 { --max-font-size: 109; }
+.p110 { --max-font-size: 110; }
+.p111 { --max-font-size: 111; }
+.p112 { --max-font-size: 112; }
+.p113 { --max-font-size: 113; }
+.p114 { --max-font-size: 114; }
+.p115 { --max-font-size: 115; }
+.p116 { --max-font-size: 116; }
+.p117 { --max-font-size: 117; }
+.p118 { --max-font-size: 118; }
+.p119 { --max-font-size: 119; }
+.p120 { --max-font-size: 120; }
+.p121 { --max-font-size: 121; }
+.p122 { --max-font-size: 122; }
+.p123 { --max-font-size: 123; }
+.p124 { --max-font-size: 124; }
+.p125 { --max-font-size: 125; }

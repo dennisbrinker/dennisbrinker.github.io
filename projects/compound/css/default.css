@@ -1,0 +1,147 @@
+/* ----------------------------------
+        MARK: TITLE/LEGAL SCREEN
+---------------------------------- */
+#box_legal {
+    background: #fff;
+    border-top: 0.8em solid #004892;
+    word-break: break-word;
+}
+
+#box_legal .wrapper {width: min(1200px, var(--default-max-width));}
+
+/* #legal_wrapper_full {
+    padding-block: min(6em, 10vw);
+    word-break: break-word;
+} */
+
+#box_legal p, #box_legal li {
+    --max-font-size: 13;
+    --min-font-size: 13;
+    line-height: 150%;
+    color: #939393;
+}
+#box_legal li {margin-block: 0.25em;}
+
+#box_legal.dark_mode {
+    background: #000;
+    border-top: 0.8em solid #3148ce;
+}
+
+#box_legal ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 50%), 1fr));
+    gap: 0 min(50px, 4vw);
+}
+@media only screen and (max-width: 650px) {
+	#box_legal ul {grid-template-columns: repeat(auto-fit, minmax(min(150px, 50%), 1fr));}
+}
+
+
+/* ----------------------------------
+        MARK: NAV DROPDOWN MENU
+---------------------------------- */
+#nav_wrapper {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    z-index: 80;
+    display: block;
+}
+
+#nav_square {
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#nav_menu {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#nav_menu li {
+    margin: 0px;
+    cursor: pointer;
+    border-top: 1px solid #17ffff;
+    background-color: rgba(0, 52, 102,0.95);
+    max-width: calc(100vw - 2em);
+    transition: 0.15s background;
+}
+
+#nav_menu li:last-child {
+    border-bottom: 1px solid #17ffff;
+}
+
+#nav_menu li.locked {
+    background: rgba(88, 88, 88, 0.95);
+    cursor: no-drop;
+}
+#nav_menu li.locked p {
+    color: #dcdcdc;
+}
+
+#nav_menu li:not(.locked):hover p {
+    color: #17ffff;
+}
+
+#nav_menu li p {
+    margin: 0;
+    padding: 0.7em;
+    color: #fff;
+    line-height: 120%;
+    min-width: 7em;
+    transition: 0.15s color;
+}
+
+#nav_menu li.nav-current p {
+    color: #17ffff;
+}
+
+
+/* ----------------------------------
+        MARK: PRELOADER
+---------------------------------- */
+#preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#preloader_wrapper {
+    width: 85%;
+    max-width: 550px;
+    text-align: center;
+}
+
+#loading_bar_full_wrapper {
+    margin: 0 auto;
+    opacity: 0;
+}
+#loading_bar_full_bar {
+    height: 2px;
+    background: #357FB7;
+    width: 100%;
+}
+#loading_bar_full_inner {
+    width: 0px;
+    height: 8px;
+    background: #00ACEE;
+	position: relative;
+    top: -3px;
+    margin: 0 auto;
+}
+
+#loading_bar_full-progress {
+    text-align:center;
+    margin-top: 30px;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+
+@media only screen and (min-width: 1921px) {
+
+	#loading_bar_full-progress.p20 {font-size:1.7em;}
+	
+}

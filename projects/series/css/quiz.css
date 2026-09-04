@@ -1,0 +1,270 @@
+/* INTERNAL CONTENT QUIZ STYLES */
+/* Note that most quiz colors are customized per course in curtain.css */
+
+#quiz-body {
+    font-size: 16px;
+    font-family: Lato, Verdana, Arial, Sans-Serif;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    font-weight: normal;
+    line-height: 140%;
+    -webkit-text-size-adjust: 100%;
+}
+
+#quiz-main-wrapper {
+    width: clamp(57.8125em, 80%, 85.3125em); /* 925px - 1365px */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    -webkit-text-size-adjust: 100%;
+    text-align: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#quiz-question-wrapper {
+    margin-top: 1em; /* so layout looks better on IE */
+}
+
+#quiz-question-wrapper .quiz-answer-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 2em;
+    perspective: 500px;
+}
+
+
+/* FONT STYLES --------------- */
+
+#quiz-body p {
+    color: inherit;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 140%;
+}
+
+#quiz-body h2 {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 140%;
+}
+
+#quiz-body .quiz-question-text {    
+    font-family: PlayfairDisplay, Baskerville, Georgia, Serif;
+	font-size: 1.275em;
+    font-weight: normal;
+    line-height: 1.12em;
+}
+
+
+#quiz-body a {
+    text-decoration: none
+}
+
+
+/* QUIZ ANSWER STYLING --------------- */
+
+#quiz-question-wrapper .answer, #quiz-question-wrapper .answerSelected {
+    background: #fff;
+    min-height: 2.5em;
+    cursor: pointer;
+    -webkit-text-size-adjust: 100%;
+    border-radius: 0.4em;
+    width: calc(50% - 1.5em);
+    flex: 0 1 auto;
+    padding: 1.5em 1em;
+    box-sizing: border-box;
+    margin: 0.75em;
+    color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.25s, background 0.25s;
+}
+#quiz-question-wrapper .answer.answerSelected {
+    background: #5e4347;
+    color: #fff;
+}
+
+
+/* RESULTS SCREEN & ACTIONS --------------- */
+
+#quiz-body .results .quiz-top-text {
+    margin-bottom: 2em;
+}
+
+#quiz-body .results .quiz-message-1 {    
+    font-family: PlayfairDisplay, Baskerville, Georgia, Serif;
+    color: #FFF;
+    font-size: 2.25em;
+    margin: 0;
+}
+
+#quiz-body .results .quiz-message-2 {
+    color: #ffffff;
+    font-size: 1.25em;
+    font-style: italic;
+    margin: 0;
+}
+
+#quiz-body .results .question-result-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 58em;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#quiz-body .results .question-result-wrapper > div {
+    flex: 1 1 50%;
+    min-height: 4.5em;
+    padding: 1em 1.5em;
+    margin: 0.75em;
+    box-sizing: border-box;
+    border-radius: 0.4em;
+    display: flex;
+    align-items: center;
+}
+
+#quiz-body .results .question-correct-answer {
+    color: #fff;
+}
+
+
+#quiz-body .results .question-result {  
+    color: #000000;
+    -webkit-text-size-adjust: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#quiz-body .results .correct {
+    background: #fff;
+}
+#quiz-body .results .incorrect {
+    background: #ccc;
+}
+
+#quiz-body .results .question-result div {
+    flex: 0 0 auto;
+    height: 30px;
+    width: 30px;
+    margin-left: 1em;
+    border-radius: 50%;
+}
+
+#quiz-body .results .question-result img {
+    display: block;
+    width: inherit;
+    height: inherit;
+}
+
+#quiz-body .results .actions {
+    margin-top: 1em;
+    padding: 1em 0;
+    width: 100%;
+    text-align: center;
+}
+#quiz-body .results .actions a {
+    cursor: pointer;
+    min-width: 5em;
+    color: #FFF;
+    padding: .3em 2.5em;
+    height: 2em;
+    line-height: 2.05em;
+    border-radius: .4em;
+    text-align: center;
+    display: inline-block;
+    margin: 0.5em 1em;
+    transition: background 0.2s;
+}
+
+#quiz-body .results.removeRetakeQuizBtn a.stopQuiz {display: none;}
+
+
+/* PROGRESS DOTS --------------------- */
+#quiz-progress-wrapper {
+    margin-top: 4em;
+    margin-bottom: 1em;
+}
+
+#quiz-progress-wrapper .dot {
+    border-radius: 0.3em;
+    width: 1.5em;
+    height: 0.4em;
+    margin: 0 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+#quiz-progress-wrapper .dot.current {
+    background-color:#fff;
+}
+
+
+/* MEDIA QUERIES --------------------- */
+
+/* 4K Quiz Styles */
+@media only screen and (min-width: 3500px) {
+    #quiz-body {
+        font-size: 24px;
+    }
+}
+
+/* Tablet Quiz Styles */
+@media only screen and (max-width: 1024px) {
+    
+    #quiz-question-wrapper .answer {
+        width: 100%;
+        margin: 0.65em;
+    }
+    #quiz-main-wrapper {
+        width: 100%;
+        padding: 1.5em;
+        box-sizing: border-box;
+    }
+    
+}
+
+/* Phone Quiz Styles */
+@media only screen and (max-width: 768px) {
+    
+    #quiz-question-wrapper .answer {
+        min-height: 3.5em;
+        width: 100%;
+        padding: 1em;
+        margin: 0.8em;
+    }
+    
+    #quiz-body .results .question-result-wrapper {
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+    #quiz-body .results .question-result-wrapper > div {
+        margin: 5px;
+        min-height: 0;
+        padding: 1em;
+    }
+    #quiz-progress-wrapper {
+        margin-top: 2em;
+    }
+
+}

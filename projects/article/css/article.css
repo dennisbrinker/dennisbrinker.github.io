@@ -1,0 +1,589 @@
+/* ----------------------------------
+        ARTICLE STYLES
+---------------------------------- */
+
+:root {
+    --default-width: calc(100% - 10vw);
+    --default-margin-block: min(90px, 10vw);
+    --default-padding-inline: min(50px, 5vw);
+    --default-font-block-margin: 20px;
+    --dafault-line-height: 167%;
+    --main-gap: min(30px, 4vw);
+    --gray: #b3b3b3;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* -------------------------
+        MARK: Fonts
+---------------------------- */
+body {
+    background: #fff;
+    color: #000;
+}
+
+p, ul li, ol li {
+    --max-font-size: 18;   
+    --min-font-size: 16;   
+}
+
+p {  
+    line-height: var(--dafault-line-height);
+    margin-block: var(--default-font-block-margin);
+}
+
+ul, ol {margin-block: var(--default-font-block-margin);}
+ul ul {margin-inline-start: 1em;}
+ul li, ol li {
+    line-height: var(--dafault-line-height);
+    margin-bottom: 0.5em;
+    margin-inline-start: 1em
+}
+
+h1.title {   
+    --max-font-size: 120;
+	--min-font-size: 40;
+    line-height: 105%;
+    color: #fff;
+    text-wrap: balance;
+    margin: 0;
+}
+h1.title.shorttitle {
+    --max-font-size: 150;
+	--min-font-size: 46;
+}
+h1.title.longtitle {
+    --max-font-size: 85;
+	--min-font-size: 36;
+}
+
+h1 {
+    --max-font-size: 50;
+	--min-font-size: 30;
+    line-height: 124%;
+    font-weight: bold;
+    margin-block: var(--default-font-block-margin);
+}
+
+h2 {
+    --max-font-size: 30;
+	--min-font-size: 24;
+    line-height: 120%;
+    font-weight: bold;
+    margin-block: var(--default-font-block-margin);
+}
+
+h3 {
+    --max-font-size: 26;
+	--min-font-size: 22;
+    line-height: 130%;
+    font-weight: 500;
+    margin-block: var(--default-font-block-margin);
+}
+.notIntelOne h3 {font-weight: bold;}
+
+.wrapper > :where(h1,h2,h3,p,li):first-child {margin-top: 0;} 
+.wrapper > :where(h1,h2,h3,p,li):last-child {margin-bottom: 0;}
+h3 + p {margin-top: 0.666em;}
+
+p.disclaimer {
+    --max-font-size: 14;
+    --min-font-size: 14;
+    font-style: italic;
+    margin-top: calc(var(--default-font-block-margin) / 1.5);
+}
+
+#content_wrapper a {
+    color: var(--accent-color-1);
+    font-weight: normal;
+    font-style: italic;
+}
+
+.callout {
+    color: var(--gray);
+    margin-block: 1.25em;
+}
+.callout span {color: #000;}
+.callout b {color: #000;}
+
+
+/* -------------------------
+        MARK: Colors
+---------------------------- */
+/* NOTE: Color Themes are declared in default.css and classes are adding to html */
+.white {color: #fff;}
+.black {color: #000;}
+.gray {color: var(--gray);}
+
+
+/* -------------------------
+     MARK: Wrapper/Widths
+---------------------------- */
+#main_wrapper {
+    height: auto;
+    background: #fff;
+}
+
+#content_wrapper {height: auto;}
+
+.wrapper {
+    margin-inline: auto;
+    margin-block: var(--default-margin-block);
+}
+
+.full_width {width: 100%;}
+.wide_width {width: min(1600px, var(--default-width));}
+.med_width {width: min(1200px, var(--default-width));} 
+.thin_width {width: min(700px, var(--default-width));}
+
+.wrapper .wide_width,
+.wrapper .med_width,
+.wrapper .thin_width {
+    margin-inline: auto;
+}
+
+
+/* -------------------------
+      MARK: Intro / Title
+---------------------------- */
+#article_intro {
+	width: 100%; 
+	min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#hero_image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+#article_intro .inner {
+    width: 100%; 
+    background-color: rgba(255, 255, 255, 0);
+    mix-blend-mode: screen;
+    min-height: inherit;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+#article_intro .headline {
+    margin-inline: auto;
+    margin-block: var(--default-margin-block);
+}
+
+
+/* -------------------------
+      MARK: Image Styles
+---------------------------- */
+.inline_image {
+    /* NOTE: Declare image width on a case by case basis */
+	height: auto;
+	display: block;
+    position: relative;
+	margin-inline: auto;
+}
+
+.float_img_right {
+    width: min(334px, 42%);
+	float: right; 
+	margin-inline-start: min(24px, 5vw);
+	margin-block: 8px;
+}
+.float_img_left {
+    width: min(132px, 30%);
+	float: left; 
+	margin-inline-end: min(24px, 5vw);
+	margin-block: 8px;
+}
+
+.image_scroll {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/540;
+}
+.image_scroll img {
+    width: 100%;
+    height: 100%;    
+    display: block;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+.image_scroll:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 20px 5px rgba(0,0,0,0.3);
+}
+
+
+/* ---------------------------------------
+    MARK: Quote / Color Panel
+------------------------------------------ */
+.quote_wrapper, .color_panel {
+    background: var(--accent-color-1);
+    padding-block: min(120px, 10vw);
+}
+
+.quote_wrapper .quote_author {
+    --max-font-size: 24;
+	--min-font-size: 20;
+    font-weight: 200;
+    text-align: end;
+    margin-top: 1.25em;
+}
+
+
+/* -------------------------
+     MARK: Column Layout
+---------------------------- */
+.column_wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* ---- NOTE: 50/50 Split ---- */
+    /* grid-template-columns: min(335px, 35%) 1fr; */  /* ---- NOTE: Custom Column Width ---- */
+    gap: var(--main-gap);
+    align-items: center;
+    margin-top: var(--default-font-block-margin);
+}
+.column_img, .text_column {width: 100%;}
+
+.column_wrapper.med_width {grid-template-columns: min(335px, 35%) 1fr;}
+
+.text_column :where(h1,h2,h3,p,li):first-child {margin-top: 0;} 
+.text_column :where(h1,h2,h3,p,li):last-child {margin-bottom: 0;}
+
+
+/* -------------------------
+        MARK: Tables
+---------------------------- */
+/* NOTE: Wrap all tables in a div with this class so the overflow display correctly on mobile */
+.chart {
+    margin-block: min(48px, 6vw);
+    overflow-x: auto;
+}
+
+.touchandswipe {
+    display: flex;
+    align-items: center;
+    margin-top: min(40px, 6vw);
+    margin-bottom: -3vw;
+}
+.touchandswipe img {margin-inline-end: 0.5em;}
+.touchandswipe.hide {display: none;}
+
+table {
+    width: 100%;
+    /* min-width: 650px; */
+    border-collapse: collapse;
+}
+
+th, td {
+    /* width: 25%; */
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+table tr:nth-child(even) {background-color: var(--accent-color-2);}
+table tr:nth-child(odd) {background-color: var(--accent-color-3);}
+table .head, table th {background-color: var(--accent-color-1);}
+
+table p {
+    line-height: 125%;
+    margin: 0px;
+}
+table .head p, table .subhead p {
+    --max-font-size: 20;
+    --min-font-size: 20;
+    font-weight: bold;
+}
+
+
+/* -------------------------
+     MARK: Icon Layout
+---------------------------- */
+.icon_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--main-gap);
+    margin-top: min(30px, 7vw);
+}
+
+.icon_wrapper .icon_container {
+    width: min(90px, 20%);
+    aspect-ratio: 1/1;
+    position: relative;
+    flex-shrink: 0;
+}
+.icon_wrapper .icon_img {max-width: 100%;}
+
+.icon_wrapper .text {flex-grow: 1;}
+
+/* ---- NOTE: Reversed Color Example ---- */
+.icon_wrapper.reverse_color {
+    background-color: var(--accent-color-2);
+    align-items: center;
+}
+.icon_wrapper.reverse_color .icon_container {
+    background-color: var(--accent-color-4);
+    align-self: stretch;
+}
+.icon_wrapper.reverse_color .icon_img {max-width: 75%;}
+.icon_wrapper.reverse_color .text {
+    padding: var(--main-gap) var(--main-gap) var(--main-gap) 0;
+    box-sizing: border-box;
+}
+/* .icon_wrapper.reverse_color .text > * {color: #fff;} */
+
+.icon_wrapper .text :where(h1,h2,h3,p,li):first-child {margin-top: 0;} 
+.icon_wrapper .text :where(h1,h2,h3,p,li):last-child {margin-bottom: 0;}
+
+
+/* -------------------------
+        MARK: Box Style
+---------------------------- */
+.box_wrapper_1_column {
+    position: relative;
+    margin-block: min(45px, 7vw);
+}
+.box_wrapper_2_column {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--main-gap);
+    margin-block: min(45px, 7vw);
+}
+
+.box_style {
+    background-color: var(--accent-color-2);
+    padding: min(40px, 6vw) min(36px, 5vw);
+    box-sizing: border-box;
+}
+.box_wrapper_1_column .box_style {margin-top: var(--main-gap);}
+
+.box_style :where(h1,h2,h3,p,li):first-child {margin-top: 0;} 
+.box_style :where(h1,h2,h3,p,li):last-child {margin-bottom: 0;}
+
+.box_style * {color: #fff;}
+
+
+/* --------------------------------
+    MARK: Conversation Layout
+----------------------------------- */
+.conversation_layout {
+    display: grid;
+    grid-template-columns: min(218px, 18%) minmax(auto, 700px) min(218px, 18%);
+    grid-column-gap: var(--main-gap);
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.conversation_layout .text {
+    width: 100%;
+    position: relative;
+}
+.conversation_spacer {width: 150px;}
+.conversation_layout img {
+    width: min(150px, 100%);
+    margin-inline: unset;
+}
+.conversation_layout img.right {justify-self: end;}
+
+
+/* -------------------------
+      MARK: Quiz Button
+---------------------------- */
+#quiz_box {
+    width: 100%;
+    position: relative;
+    background-color: var(--accent-color-2);
+    padding: 2.125em 5vw;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#quiz_box .quiz_button {
+    min-width: 235px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #fff;
+    border: solid 2px #000;
+    border-radius: 50px;
+    margin-inline: auto;
+    padding: 0.875em 1.25em;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+#quiz_box .quiz_button div {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--accent-color-3);
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+}
+#quiz_box p {
+    position: relative;
+    line-height: 100%;
+    user-select: none;
+}
+#quiz_arrow {
+    width: 29px;
+    height: auto;
+    position: relative;
+    display: block;
+    transform-origin: left center;
+    transition: all 0.35s ease-in-out;
+}
+
+/* .startQuiz {pointer-events: none;} */
+
+@media (hover: hover) {
+    #quiz_box .quiz_button:hover #quiz_arrow {transform: scaleX(1.2);}
+    #quiz_box .quiz_button:hover div {width: 100%;}
+}
+
+
+/* -------------------------
+    MARK: Default Styles
+---------------------------- */
+.center {text-align: center;}
+.left {text-align: start;}
+.right {text-align: end;}
+
+.nomargin { margin-block: 0 !important; }
+.notopmargin, .nomargintop  {margin-top: 0 !important;}
+.nobottommargin, .nomarginbottom {margin-bottom: 0 !important;}
+
+.vc {
+    display: flex;
+    align-items: center;
+}
+.hc {
+    display: flex;
+    justify-content: center;
+}
+.vhc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* -------------------------
+      MARK: Custom Code
+---------------------------- */
+
+
+
+
+
+
+
+
+
+.show_on_mobile {display: none;}
+
+
+
+/* -------------------------------
+        MARK: MEDIA QUERIES
+---------------------------------- */
+/* MARK: 1024 */
+@media only screen and (max-width: 1024px) {
+
+    :root {
+        --dafault-line-height: 150%;
+    }
+
+    #content_wrapper table th {padding: 1em 0.65em;}
+    #content_wrapper table td {padding: 0.65em;}
+
+}
+
+/* MARK: 768 */
+@media only screen and (max-width: 768px) {
+
+    .show_on_mobile {display: block;}
+    .show_on_desktop {display: none;}
+
+    .image_scroll {aspect-ratio: 768/480;}
+
+    #content_wrapper .chart table {width: 100%;}
+    #content_wrapper .chart {margin-inline: -5vw;}
+    th, td {text-align: start;}
+
+    .conversation_layout:nth-of-type(even) .text {grid-column: 2 / 4;}
+    .conversation_layout:nth-of-type(odd) .text {grid-column: 1 / 3;}
+	
+}
+
+/* MARK: 650 */
+@media only screen and (max-width: 650px) {
+
+    .column_wrapper, .box_wrapper_2_column, .conversation_layout, .column_wrapper.med_width {grid-template-columns: 1fr;}
+
+    .column_wrapper {gap: 6vw;}
+
+    .icon_wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .icon_wrapper .icon_container {width: min(90px, 100%);}
+    .icon_wrapper .text {width: 100%;}
+    .icon_wrapper.reverse_color .icon_container {
+        width: 100%;
+        aspect-ratio: unset;
+        padding: 4vw;
+        box-sizing: border-box;
+    }
+    .icon_wrapper.reverse_color .text {padding: 0 5vw 5vw;}
+
+    .conversation_spacer {display: none;}
+    .conversation_layout img {
+        order: 1;
+        margin-bottom: 4vw;
+    }
+    .conversation_layout img.right, .conversation_layout img.left {justify-self: start;}
+    .conversation_layout:nth-of-type(even) .text, .conversation_layout:nth-of-type(odd) .text {grid-column: 1 / 2;}
+    .conversation_layout .text {order: 2;}
+    .conversation_layout .text.right {text-align: start;}
+
+    /* ---- NOTE: Uncomment if you need to clear floats ---- */
+    /* .float_img_left, .float_img_right {
+        width: min(334px, 80%);
+        float: unset;
+        margin-inline: auto;
+        margin-block: 0;
+        display: block;
+    } */
+
+}

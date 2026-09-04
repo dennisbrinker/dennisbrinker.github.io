@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Used for languages that support the Intel One font
+   Used for 2021-06 IREP courses and newer */
+
+
+/* normal */
+@font-face {
+	font-family: 'IntelOne';
+	src: url("fonts/Intel_One/intelone-display-regular.woff") format("woff");
+	font-weight: normal;
+}
+
+/* medium */
+@font-face {
+	font-family: 'IntelOne';
+	src: url("fonts/Intel_One/intelone-display-medium.woff") format("woff");
+	font-weight: 500;
+}
+
+/* bold */
+@font-face {
+	font-family: 'IntelOne';
+	src: url("fonts/Intel_One/intelone-display-bold.woff") format("woff");
+	font-weight: 600;
+}
+
+
+/* light */
+@font-face {
+	font-family: 'IntelOne';
+	src: url("fonts/Intel_One/intelone-display-light.woff") format("woff");
+	font-weight: 200;
+}
+
+
+.intelOne {
+    font-family: IntelOne, IntelClear, Arial, sans-serif;
+}

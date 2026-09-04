@@ -1,0 +1,433 @@
+/* ----------------------------------
+        CURTAIN STYLES
+---------------------------------- */
+
+:root {
+    --block-padding: min(6em, 8vw);
+    --inline-padding: min(50px, 5vw);
+    --full-width: min(1800px, 100%);
+    --medium-width: min(1210px, 100%);
+    --small-width: min(800px, 100%);
+    --border-width: min(20px, 3vw);
+
+    --pink: #d14cc9;
+    --orange: #ff6500;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    overflow-x: hidden;
+}
+
+#main_wrapper {overflow: hidden;}
+
+
+/* ----------------------------------
+        MARK: Font Styles
+---------------------------------- */
+p {
+    --max-font-size: 20;  
+	margin-block: 1em;
+	line-height: 150%;
+}
+ul, ol {
+	margin-block: 0.9375em;
+	line-height: 150%;
+}
+li {
+    --max-font-size: 20;   
+    margin-left: 1.25em;
+	margin-top: 0.3125em;
+	margin-bottom: 0.4125em;
+	line-height: 150%;
+}
+
+h1 {
+    --max-font-size: 45;
+	--min-font-size: 28;
+	font-weight: bold;
+	line-height: 1.1em;
+}
+h2 {
+    --max-font-size: 32;
+	--min-font-size: 24;
+	font-weight: bold;
+	line-height: 1.1em;
+}
+h3 {
+    --max-font-size: 24;
+	--min-font-size: 20;
+    font-weight: bold;
+	line-height: 1.3em;
+}
+
+h1 + h2 {margin-top: 0.5em;}
+h2 + h3 {margin-top: 1em;}
+h1 + p {margin-top: 0.7em;}
+h2 + p {margin-top: 0.7em;}
+p:last-child {margin-bottom: 0;}
+
+
+/* ----------------------------------
+        MARK: Colors
+---------------------------------- */
+/* Default Font Colors ------------------------- */
+.white {color: #fff;}
+.orange {color: var(--orange);}
+.pink {color: var(--pink);}
+
+.blue { color:#0071c5; }
+.gray { color:#555555; }
+.yellow { color:#feda00; }
+.green { color:#74a72d; }
+.dk_gray { color:#333333; }
+.dk_orange { color:#fb4b02; }
+.purple { color: #180153; }
+.lt_blue { color:#00adef; }
+.dk_blue { color:#003b70; }
+.black { color:#000000; }
+
+/* 6.0 Colors -------------------------- */
+.blue1 {color:#143e6e;}
+.blue2 {color:#16559b;}
+.blue3 {color:#376bb9;}
+.gray-blue1 {color:#6599d8;}
+.gray-blue2 {color:#69a4d1;}
+.gray-blue3 {color:#6894b9;}
+.gray-blue4 {color:#4c789e;}
+.gray1 {color:#282b2d;}
+.gray2 {color:#545c63;}
+.gray3 {color:#545c63;}
+.gray4 {color:#919da9;}
+.gray5 {color:#9ca9b6;}
+.gray6 {color:#b6bfcb;}
+.gray7 {color:#ecedf1;}
+.green1 {color:#58801f;}
+.green2 {color:#97be2c;}
+.green3 {color:#a6ce39;}
+.green4 {color:#c3d600;}
+
+/* Background Colors ------------------------- */
+.whitebg {background: #fff;}
+.whitebg_trans {background: rgba(255, 255, 255, 0.9);}
+.bluebg_trans {background: rgba(28, 107, 181, 0.9);}
+
+.whitebg .content, .whitebg_trans .content {color: #333;}
+.bluebg_trans .content, .bluegradient .content {color: #fff;}
+
+.text_on_right .bluegradient {background: linear-gradient(to right, rgba(54,28,183,0.9) 0%, rgba(38,12,115,0.9) 100%);}
+.text_on_left .bluegradient {background: linear-gradient(to left, rgba(54,28,183,0.9) 0%, rgba(38,12,115,0.9) 100%);}
+
+.bluegradient_box {
+	background: linear-gradient(to bottom, rgba(54,28,183,0.95), rgba(38,12,115,0.95));
+	color: #fff;
+}
+
+
+/* ----------------------------------
+        MARK: Layout Styles
+---------------------------------- */
+/* Panel Styles ------------------------- */
+.panel {
+    display: flex;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: var(--full-width);
+    position: relative;
+    margin: 0 auto;
+    padding-block: var(--block-padding);
+    padding-inline: var(--inline-padding);
+    display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+.full_height {min-height: 100dvh;}
+
+.text_on_left .wrapper, .text_on_right .wrapper {
+    width: 50%;
+    margin: 0;
+}
+.text_on_left .wrapper {justify-content: flex-end;}
+.text_on_right {justify-content: flex-end;}
+.text_on_right .wrapper {justify-content: flex-start;}
+.text_on_left .content, .text_on_right .content  {width: min(800px, 100%);}
+
+.text_on_bot, .text_on_top, .full_width_text, .text_in_center {flex-direction: column;}
+
+.text_on_top {
+    justify-content: flex-start;
+}
+
+.text_on_bot {
+    justify-content: flex-end;
+}
+
+/* Used in text_on_top / text_on_bot panels to make sure content doesn't cover too much of bg image. Adjust as needed. */
+.bg_spacer {
+    min-height: 50vh;
+}
+
+.text_in_center.full_height {
+    align-items: center;
+    justify-content: center;
+}
+.center_box {
+    width: var(--medium-width);
+	display: inline-block;	
+    margin-inline: auto;
+    margin-block: 0;
+}
+.center_box.blue_border {
+	border: var(--border-width) solid rgba(7, 118, 203, 0.5);
+}
+.center_box.white_border {
+	border: var(--border-width) solid rgba(255, 255, 255, 0.5);
+}
+.center_box .content {
+	padding: min(60px, 6vw) min(70px, 4vw) min(50px, 5vw) min(70px, 4vw);
+    color: #fff;
+}
+
+.text_scroll, .image_scroll {
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+/* For mobile iOS: Removes the position fixed due to iOS issue. */
+.ios .text_scroll, .ios .image_scroll {
+	overflow: inherit;
+	background-attachment: inherit;
+}
+
+.content {
+    width: 100%;
+    position: relative;
+}
+
+.small-width {width: var(--small-width);}
+.medium-width {width: var(--medium-width);}
+
+.center_align {margin-inline: auto;}
+
+
+/* Image Styles ------------------------- */
+/* This class is used for images that are not meant to stretch the full width
+   of the page, like badges or device pictures. */
+.inline_img {
+    display: block;
+    max-width: 100%;
+}
+img.center {margin: 0 auto}
+
+
+
+/* Used to show an image on the text on left/text on right panels */
+.side_img_container {
+    width: min(960px, 50%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.side_img_container img {
+    width: auto;
+    height: auto;
+    max-width: calc(100% - var(--inline-padding)*2);
+    max-height: 90%;
+}
+
+
+/* Misc Styles ------------------------- */
+.left {text-align: left;}
+.center {text-align: center;}
+.right {text-align: right;}
+
+.nomargin {margin: 0px;}
+.notopmargin, .nomargintop {margin-top: 0px;}
+.nobottommargin, .nomarginbottom {margin-bottom: 0px;}
+
+.show_on_HD {display: block;}
+.show_on_MOB {display: none;}
+
+
+
+/* Wrap all tables in a div with this class so they display correctly on mobile */
+.chart {overflow-x: auto;}
+
+.touchandswipe {
+    display: flex;
+    align-items: center;
+    margin-top: min(40px, 6vw);
+    margin-bottom: -3vw;
+}
+.touchandswipe img {margin-inline-end: 0.5em;}
+.touchandswipe.hide {display: none;}
+
+
+/* .box_wrapper {
+    --box-gap: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--box-gap);
+} */
+
+.box {
+    /* The 393px value will need to be adjusted if other box values are changed (--box-gap, number of boxes, container width, etc) */
+    /* width: min(393px, calc(50% - var(--box-gap)));
+    min-height: 240px; */
+    padding: min(30px, 5vw) min(30px, 4vw);
+    background: linear-gradient(to top, rgba(54,28,183,0.95), rgba(38,12,115,0.95));
+	color: #fff;
+}
+
+/* ----------------------------------
+        MARK: Backgrounds
+---------------------------------- */
+#panel_1 {
+    background-image: url(../images/1-BG_HD.jpg);
+    background-position: 75% 50%;
+}
+#panel_2 {
+    background-image: url(../images/2-BG_HD.jpg);
+    background-position: 35% 50%;
+}
+#panel_4 {
+    background-image: url(../images/4-BG_HD.jpg);
+    background-position: 62% 50%;
+}
+#panel_5 {
+    background-image: url(../images/5-BG_HD.jpg);
+    background-position: 30% 50%;
+}
+#panel_7 {background-image: url(../images/7-BG_HD.jpg);}
+
+
+
+/* ----------------------------------
+        MARK: CUSTOM CODE
+---------------------------------- */
+.list_item {margin-top: min(70px, 8vw);}
+.font_change b {
+    color: var(--orange);
+    font-size: 1.575em;
+    font-weight: bold;
+}
+.list_image {
+    width: 100%;
+    height: auto;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+    margin-top: min(40px, 5vw);
+}
+
+#panel_5 .box_wrapper {margin-top: min(70px, 8vw);}
+#panel_5 .box {
+    width: min(555px, 100%);
+    border: solid 2px var(--pink);
+    margin-bottom: min(26px, 5vw);
+}
+#panel_5 .box:last-of-type {margin-bottom: 0;}
+
+#panel_6 .box {width: 100%;}
+.list_icon {
+    width: min(160px, 45%);
+    height: auto;
+    display: block;
+    margin-inline: auto;
+    /* margin-bottom: 10px; */
+}
+
+
+/* MARK: Quiz */
+#quiz_box {
+	width: 100%;
+    margin-top: min(36px, 4vw);
+    text-align: center;
+}
+#quiz_box .container {
+	display: inline-block;
+	cursor: pointer;
+    padding: 0.7em 1.5em;
+    background: #fff;
+    color: #004892;
+    transition: 0.3s color ease-in-out;
+}
+#quiz_box p {
+    letter-spacing: 0.5px;
+    user-select: none;
+}
+#quiz_box .container:hover {color: #260c73;}
+
+
+#panel_legal.dark_mode {border-color: var(--orange);}
+
+
+/* ----------------------------------
+        MARK: MEDIA QUERIES
+---------------------------------- */
+/* FOR TABLET --------------------------*/
+@media only screen and (max-width: 1024px) { 
+    #panel_1 {background-image: url(../images/1-BG_MOB.jpg);}
+    #panel_2 {background-image: url(../images/2-BG_MOB.jpg);}
+    #panel_4 {background-image: url(../images/4-BG_MOB.jpg);}
+    #panel_5 {background-image: url(../images/5-BG_MOB.jpg);}
+    #panel_7 {background-image: url(../images/7-BG_MOB.jpg);}
+    /* Remove transparency since text doesn't overlap images */
+    .whitebg_trans {background: #fff;}
+    .bluebg_trans {background: rgba(28, 107, 181, 1);}
+    .text_on_right .bluegradient {background: linear-gradient(to top, rgba(54,28,183,0.9) 0%, rgba(38,12,115,1) 100%);}
+    .text_on_left .bluegradient {background: linear-gradient(to top, rgba(54,28,183,0.9) 0%, rgba(38,12,115,1) 100%);}
+    p {line-height: 140%;}
+    .full_height.text_on_left, .full_height.text_on_right, .panel.text_on_top, .panel.text_on_bot {min-height: unset;}
+    .panel.text_on_left, .panel.text_on_right, .panel.text_on_top, .panel.text_on_bot {
+        background-size: contain;
+        background-position: center top !important;
+        padding-top: 56%;
+    } 
+    .text_on_left .wrapper, .text_on_right .wrapper, .text_on_left .content, .text_on_right .content {width: 100%;}  
+    .side_img_container {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 56vw;
+    }
+    .bg_spacer {display: none;}
+    .text_scroll, .image_scroll {
+        overflow: inherit;
+        background-attachment: inherit;
+    }
+}
+
+/* MARK: 768 */
+@media only screen and (max-width: 768px) {
+    /* DEFAULT MOBILE STYLING */
+    .show_on_MOB {display: block;}
+    .show_on_HD {display: none;}
+    .text_in_center.full_height {min-height: unset;}
+    .text_in_center .wrapper {padding-block: 20vw;}
+    #legal_wrapper_full p {word-break: break-word;}
+}
+
+/* MARK: 450 */
+@media only screen and (max-width: 650px) {
+    #panel_6 {text-align: start;}
+    html:lang(es-mx) #quiz_box .container {width: min-content;}
+
+}

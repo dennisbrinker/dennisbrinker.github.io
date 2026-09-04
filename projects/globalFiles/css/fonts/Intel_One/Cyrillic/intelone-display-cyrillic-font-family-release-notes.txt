@@ -1,0 +1,68 @@
+Release Notes / IntelOne Display CY
+2022-09-12
+
+
+Family name
+	IntelOne Display CY
+
+Version
+	2.000
+
+Version history
+	v1.0 	2021-03-09
+			Initial release
+	v2.0 	2022-09-12
+			Recalculated vertical metrics; minor fixes to outlines; fixes to style naming
+
+Supported scripts
+	Latin (full glyph complement supporting over 200 languages)
+	Cyrillic (including localizations for Bulgarian and Serbian)
+
+Number of glyphs 
+	963
+
+Weights/Styles
+	Light
+	Regular
+	Medium
+	Bold
+
+Usage
+	Display 
+	Use at 14 pt and up in print, 24 px and up on screen
+
+File formats
+	OTF 	(Desktop)
+	TTF 	(Desktop/App)
+	WOFF 	(Web)
+	WOFF2 	(Web)
+
+Hinting
+	Automatically hinted to improve screen rendering
+
+Embedding settings
+	No embedding restrictions
+
+Available OpenType features 
+	ss01	Stylistic Set: Clipped f & t
+	ss02 	Stylistic Set: Biform A
+	ss03 	Stylistic Set: Biform E
+	ss04 	Stylistic Set: Biform M & N
+	ss05 	Localized Forms (Bulgarian)
+	ss06 	Localized Forms (Serbian)
+	ss11 	Raised Colon (Figures Only)
+	ss12 	Raised Colon (Global)
+	salt 	Stylistic Alternates
+	calt 	Contextual Alternates (Ukrainian)
+	liga	Automatic Ligatures
+	frac	Automatic Fractions
+	numr 	Numerator
+	dnom	Denominator
+	sups	Superscript
+	subs 	Subscript
+	sinf	Scientific Inferior
+	locl 	Localizations
+	ccmp	Glyph Composition/Decomposition Rules
+	kern	Kerning
+
+

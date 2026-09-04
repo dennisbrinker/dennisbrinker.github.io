@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* latin */
+@font-face {
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/Bebas-Neue.woff2') format('woff2'), url('fonts/Bebas-Neue.woff') format('woff');
+}
+
+
+/* LATO FONT FAMILY */
+/* normal */
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* bold */
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* italic */
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-LightItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+/* bold italic */
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
+.lato {font-family: Lato, Verdana, Arial, Sans-Serif;}
+
+body {font-family: Lato, Verdana, Arial, Sans-Serif;}
+
+
+
+/* PLAYFAIR DISPLAY FONT FAMILY */
+/* normal */
+@font-face {
+	font-family: 'PlayfairDisplay';
+	src: url('fonts/PlayfairDisplay-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* bold */
+@font-face {
+	font-family: 'PlayfairDisplay';
+	src: url('fonts/PlayfairDisplay-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* italic */
+@font-face {
+	font-family: 'PlayfairDisplay';
+	src: url('fonts/PlayfairDisplay-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+/* bold italic */
+@font-face {
+	font-family: 'PlayfairDisplay';
+	src: url('fonts/PlayfairDisplay-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
+.playfair {font-family: PlayfairDisplay, Baskerville, Georgia, Serif;}
+
+
+
+
+.bold {font-weight: bold;}
+.itl {font-style: italic;}
+.lte {font-weight: lighter;}
+.normal {font-weight: normal;}
+
