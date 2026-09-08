@@ -747,6 +747,7 @@ img.center {margin: 0 auto}
     padding: 0.56em 1.11em;
     box-sizing: border-box;
     transition: all 0.4s;
+    user-select: none;
 }
 #quiz_box a:hover {
     color: #ffffff;
